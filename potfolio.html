@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Amoako | IT Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-blue-600">Stephen<span class="text-gray-800">.dev</span></div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-blue-600">Home</a>
+                <a href="#about" class="nav-link hover:text-blue-600">About</a>
+                <a href="#experience" class="nav-link hover:text-blue-600">Experience</a>
+                <a href="#projects" class="nav-link hover:text-blue-600">Projects</a>
+                <a href="#certifications" class="nav-link hover:text-blue-600">Certifications</a>
+                <a href="#contact" class="nav-link hover:text-blue-600">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full">
+            <div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+                <a href="#home" class="hover:text-blue-600">Home</a>
+                <a href="#about" class="hover:text-blue-600">About</a>
+                <a href="#experience" class="hover:text-blue-600">Experience</a>
+                <a href="#projects" class="hover:text-blue-600">Projects</a>
+                <a href="#certifications" class="hover:text-blue-600">Certifications</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mt-10 md:mt-0 section-fade">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Stephen Boateng Amoako</h1>
+                <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">IT Professional & Software Developer</h2>
+                <p class="text-lg text-gray-700 mb-8">Specializing in IT support, data analysis, and software
+                    development with expertise in web technologies and AI integration.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Contact Me
+                    </a>
+                    <a href="#projects"
+                        class="bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center section-fade">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 opacity-75 blur">
+                    </div>
+                    <img src="/api/placeholder/400/400" alt="Stephen Amoako"
+                        class="relative w-64 h-64 rounded-full object-cover border-4 border-white shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 section-fade">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0 section-fade">
+                    <h3 class="text-xl font-semibold mb-4">Professional Summary</h3>
+                    <p class="mb-4">Results-driven Information Technology student at the University of Cape Coast,
+                        specializing in IT support, data analysis, and software development. With nearly four years of
+                        hands-on experience in technical roles, I'm committed to delivering innovative solutions that
+                        drive business success.</p>
+                    <p class="mb-6">I leverage prompt engineering and artificial intelligence to enhance my technical
+                        capabilities, allowing me to create more efficient and effective solutions for complex problems.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-medium text-blue-600 mb-2">Location</h4>
+                            <p>Greater Accra, Ghana</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-blue-600 mb-2">Relocation</h4>
+                            <p>Open to anywhere</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-blue-600 mb-2">Education</h4>
+                            <p>BSc Information Technology</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-blue-600 mb-2">Graduation</h4>
+                            <p>Expected 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-5/12 section-fade">
+                    <h3 class="text-xl font-semibold mb-4">Skills & Expertise</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Web Development</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">IT Support</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Data Analysis</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Network Support</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Microsoft Office</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">AI Integration</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 section-fade">Work Experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-200"></div>
+
+                    <!-- Job #1 -->
+                    <div class="relative pl-24 pb-12 section-fade">
+                        <div
+                            class="absolute left-0 bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-blue-600">Software Developer</h3>
+                                <div class="text-gray-600 mt-1 md:mt-0">
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Oct 2024 - Dec
+                                        2024</span>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-medium mb-3">Npontu Technologies Ltd - Accra</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Developed Xtra-MFX, a data analysis software designed to filter SMS traffic for
+                                    companies, optimizing message processing and compliance.</li>
+                                <li>Led the development of Red-Mango, a web-based payment gateway for a hotel, ensuring
+                                    secure and seamless online transactions.</li>
+                                <li>Designed and implemented backend logic, database structures, and API integrations to
+                                    enhance functionality and performance.</li>
+                                <li>Collaborated with cross-functional teams to align software solutions with business
+                                    needs and improve user experience.</li>
+                                <li>Maintained and optimized code for scalability, security, and efficiency across both
+                                    projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job #2 -->
+                    <div class="relative pl-24 section-fade">
+                        <div
+                            class="absolute left-0 bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-laptop text-white text-2xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-blue-600">IT Support Specialist</h3>
+                                <div class="text-gray-600 mt-1 md:mt-0">
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">May 2022 - Dec
+                                        2023</span>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-medium mb-3">Korlebu Teaching Hospital - Greater Accra</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Digitized over 1,500+ legacy patient records for the Plastics and Surgery Department
+                                    by implementing a structured "scan and fetch" workflow, ensuring seamless migration
+                                    to the hospital's new Health Management System.</li>
+                                <li>Streamlined data retrieval processes for clinical staff, reducing patient record
+                                    access time by 60% and improving overall data accuracy.</li>
+                                <li>Provided technical support, managed network infrastructure, and ensured system
+                                    uptime for critical health services.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 section-fade">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden project-card section-fade">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-5xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project 1</h3>
+                        <p class="text-gray-600 mb-4">Add your project description here. Highlight the technologies
+                            used and the problem you solved.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">HTML</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">CSS</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span>View Demo</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="https://github.com/SteohenAmoako"
+                                class="text-gray-600 hover:text-gray-800 flex items-center">
+                                <i class="fab fa-github mr-2"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden project-card section-fade">
+                    <div class="h-48 bg-gradient-to-r from-indigo-400 to-indigo-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-white text-5xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project 2</h3>
+                        <p class="text-gray-600 mb-4">Add your project description here. Highlight the technologies
+                            used and the problem you solved.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Tailwind</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">API</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span>View Demo</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                                <i class="fab fa-github mr-2"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden project-card section-fade">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-database text-white text-5xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project 3</h3>
+                        <p class="text-gray-600 mb-4">Add your project description here. Highlight the technologies
+                            used and the problem you solved.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">MySQL</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Django</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span>View Demo</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                                <i class="fab fa-github mr-2"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 section-fade">Certifications & Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Certification 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 section-fade">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <i class="fas fa-award text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Certificate of Merit – Success Africa 2025</h3>
+                        <p class="text-gray-600 text-sm mb-2">February 2025</p>
+                        <p class="text-gray-700">Recognized for outstanding leadership and technical contributions as
+                            lead of the technical team, overseeing sound engineering, projection, and communications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 section-fade">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Certificate of Merit – IT Training Volunteer</h3>
+                        <p class="text-gray-600 text-sm mb-2">February 2025</p>
+                        <p class="text-gray-700">Awarded for volunteering in the intensive Information Technology
+                            training program organized by the Student Representative Council (SRC) at UCC.</p>
+                    </div>
+                </div>
+
+                <!-- Certification 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 section-fade">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <i class="fas fa-network-wired text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Bits and Bites of Computer Networking</h3>
+                        <p class="text-gray-600 text-sm mb-2">Google & Coursera | February 2024</p>
+                        <p class="text-gray-700">Online course authorized by Google covering computer networking
+                            fundamentals.</p>
+                    </div>
+                </div>
+
+                <!-- Certification 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 section-fade">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <i class="fas fa-database text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Intro To Modern Database System</h3>
+                        <p class="text-gray-600 text-sm mb-2">Saylor Academy | June 2023</p>
+                        <p class="text-gray-700">Course covering modern database systems, concepts, and best practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certification 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 section-fade">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <i class="fas fa-tools text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Technical Support Fundamentals</h3>
+                        <p class="text-gray-600 text-sm mb-2">Google & Coursera | April 2023</p>
+                        <p class="text-gray-700">Online course authorized by Google covering technical support
+                            principles and practices.</p>
+                    </div>
+                </div>
+
+                <!-- Group -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 section-fade">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <i class="fab fa-google text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Google Developer Student Club</h3>
+                        <p class="text-gray-600 text-sm mb-2">Since June 2022</p>
+                        <p class="text-gray-700">Active member of the university-based community group for students
+                            interested in Google technologies and programming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 section-fade">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2 section-fade">
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-gray-800">
+                        <h3 class="text-xl font-semibold mb-6 text-blue-600">Send Me a Message</h3>
+                        <!-- FormSubmit.co form - replace YOUR_EMAIL with your actual email -->
+ 
+    <form action="https://formsubmit.co/stephen.amoako.b04@gmail.com" method="POST">
+      <!-- FormSubmit Configuration -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New Contact Form Submission">
+      <input type="hidden" name="_autoresponse" value="Thanks for contacting me! I'll get back to you soon.">
+      <!-- Prevents spam by fooling bots -->
+      <input type="text" name="_honey" style="display:none">
+      <!-- Redirect after submission (optional) -->
+      <!-- <input type="hidden" name="_next" value="https://yoursite.com/thanks.html"> -->
+      
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 mb-2">Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 mb-2">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <div class="mb-4">
+        <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+        <input type="text" id="subject" name="subject" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        Send Message
+      </button>
+    </form>
+
+
+                    </div>
+                </div>
+                <div class="md:w-1/2 section-fade">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 h-full">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-white/20 rounded-full p-3">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white/80">Email</h4>
+                                    <p>stevekobbi20@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-white/20 rounded-full p-3">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white/80">Phone</h4>
+                                    <p>+233 595 919 802</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-white/20 rounded-full p-3">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white/80">Location</h4>
+                                    <p>Greater Accra, Ghana</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <h3 class="text-xl font-semibold mb-4">Follow Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/stephen-amoako-204780237"
+                                    class="bg-white/20 hover:bg-white/30 transition duration-300 w-12 h-12 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="https://github.com/SteohenAmoako"
+                                    class="bg-white/20 hover:bg-white/30 transition duration-300 w-12 h-12 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="https://x.com/kobbisteve?s=21"
+                                    class="bg-white/20 hover:bg-white/30 transition duration-300 w-12 h-12 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="https://www.instagram.com/s.t.e.v.e.t.e.c.k_2?igsh=MWNrdmp1aGhzNGw1aw%3D%3D&utm_source=qr"
+                                    class="bg-white/20 hover:bg-white/30 transition duration-300 w-12 h-12 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-blue-400">Stephen<span class="text-white">.dev</span></div>
+                    <p class="mt-2 text-gray-400">Information Technology Professional</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#home" class="hover:text-blue-400 transition duration-300">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition duration-300">About</a>
+                    <a href="#experience" class="hover:text-blue-400 transition duration-300">Experience</a>
+                    <a href="#projects" class="hover:text-blue-400 transition duration-300">Projects</a>
+                    <a href="#certifications" class="hover:text-blue-400 transition duration-300">Certifications</a>
+                    <a href="#contact" class="hover:text-blue-400 transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Stephen Boateng Amoako. All rights reserved.</p>
+                <p class="mt-4 md:mt-0">Designed with <i class="fas fa-heart text-red-500"></i> in Ghana</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset -
+                        navHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll Animation for Sections
+        const sectionFades = document.querySelectorAll('.section-fade');
+
+        function checkFades() {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            sectionFades.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        // Check initial state on page load
+        window.addEventListener('load', checkFades);
+
+        // Check on scroll
+        window.addEventListener('scroll', checkFades);
+
+        // Form Validation (Simple Example)
+        const contactForm = document.querySelector('#contact form');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+
+                let isValid = true;
+
+                if (!nameInput.value.trim()) {
+                    nameInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    nameInput.style.borderColor = '';
+                }
+
+                if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+                    emailInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    emailInput.style.borderColor = '';
+                }
+
+                if (!messageInput.value.trim()) {
+                    messageInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    messageInput.style.borderColor = '';
+                }
+
+                if (isValid) {
+                    // Simulate form submission
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+
+                    setTimeout(() => {
+                        nameInput.value = '';
+                        emailInput.value = '';
+                        messageInput.value = '';
+
+                        submitButton.textContent = 'Message Sent!';
+
+                        setTimeout(() => {
+                            submitButton.disabled = false;
+                            submitButton.textContent = originalText;
+                        }, 3000);
+                    }, 1500);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
